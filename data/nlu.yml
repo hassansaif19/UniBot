@@ -1,0 +1,92 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hi there
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: degreeprogram
+  examples: |
+    - What are available degree programs?
+    - What type of courses available?
+    - What are different Degree Programms?
+    - What are some suggestive courses?
+    - What type of degrees are available at bachelors level?
+    - What type of degrees are availabel at Maters level
+    - Show All the degree programs
+    - How many different types of degrees offered here
+- intent: feestructure
+  examples: |
+    - What is the fee structure?
+    - What is the fee structure for Bacheors?
+    - What si the fee structure for Maters?
+    - What is the fee structure for Phd?
+    - what are the semester fee?
+    - what are the montlhly fee?
+    - what is the fee for the programm/
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: calculateaggregate
+  examples: |
+    - I want to calculate my aggregate
+    - I want to check my admission possibility
+    - Inform me about aggregate
+    - Aggregate Caclualtor
+
+
+- lookup: place
+  examples: |
+    - brussels
+    - zagreb
+    - london
+    - lisbon
+    - amsterdam
+    - seattle

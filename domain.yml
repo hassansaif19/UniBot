@@ -1,0 +1,85 @@
+version: '3.1'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- degreeprogram
+- feestructure
+- calculateaggregate
+- bot_challenge
+entities:
+- place
+slots:
+  InterMarks:
+    type: float
+    influence_conversation: true
+    min_value: 0
+    max_value: 1100
+    mappings:
+      - type: from_text
+  TestMarks:
+    type: float
+    influence_conversation: true
+    min_value: 0
+    max_value: 100
+    mappings:
+      - type: from_text
+        
+
+
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_availabledegree:
+  - text: |
+        <-------------Following Degress Programs are Offered------------------>
+        BS Computer Science
+        BS Artificial Intelligence 
+        BS Data Science
+        BS CyberSecurity and Digital Forensics
+        BS Software Engineering
+        BS Electrical Engineering
+        BS Accounting and Finance
+        Bachelors of Business Administration
+        MS Computer Science
+        MS Artificial Intelligence 
+        MS Data Science
+        MS Software Engineering
+        MS Electrical Engineering
+        Phd Computer Science
+        Phd Artificial Intelligence 
+        Phd Data Science
+  utter_fee_structure:
+   - text: |
+      <<<----------------Following is the fee structure--------------->>>
+      For BS == 8500/CH
+      For  MS== 7500/CH
+ 
+  utter_ask_ simple_aggregate_form_InterMarks:
+   - text: What are your Intermediate Marks ..Note total marks are 1100?
+  utter_ask_ simple_aggregate_form_TestMarks:
+   - text: What are your Test Marks ..Note total marks are 100?
+
+forms:
+  simple_aggregate_form:
+    required_slots:
+      - InterMarks
+      - TestMarks
+  
+actions:
+- simple_aggregate_form

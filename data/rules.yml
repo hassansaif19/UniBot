@@ -1,0 +1,32 @@
+version: "3.1"
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Tell the Fee structure
+  steps:
+  - intent: feestructure
+  - action: utter_fee_structure
+
+- rule: Activate Aggregate Form
+  steps:
+  - intent: calculateaggregate
+  - action: simple_aggregate_form
+  - active_loop: simple_aggregate_form
+
+- rule: Submit Aggregate Form
+  condition:
+  - active_loop: simple_aggregate_form
+  steps:
+  - action: simple_aggregate_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action:  simple_aggregate_form
