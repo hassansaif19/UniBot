@@ -29,4 +29,4 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action:  simple_aggregate_form
+  - action: custom_action

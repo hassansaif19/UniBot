@@ -13,8 +13,12 @@ intents:
 - feestructure
 - calculateaggregate
 - bot_challenge
+- inter_marks
+- test_marks
 entities:
 - place
+- intermarks
+- testmarks
 slots:
   InterMarks:
     type: float
@@ -22,14 +26,20 @@ slots:
     min_value: 0
     max_value: 1100
     mappings:
-      - type: from_text
+      - type: from_entity
+        entity: intermarks
+        conditions:
+          - active_loop: simple_aggregate_form  
   TestMarks:
     type: float
     influence_conversation: true
     min_value: 0
     max_value: 100
     mappings:
-      - type: from_text
+      - type: from_entity
+        entity: testmarks
+        conditions:
+          - active_loop: simple_aggregate_form      
         
 
 
@@ -70,9 +80,9 @@ responses:
       For BS == 8500/CH
       For  MS== 7500/CH
  
-  utter_ask_ simple_aggregate_form_InterMarks:
+  utter_ask_InterMarks:
    - text: What are your Intermediate Marks ..Note total marks are 1100?
-  utter_ask_ simple_aggregate_form_TestMarks:
+  utter_ask_TestMarks:
    - text: What are your Test Marks ..Note total marks are 100?
 
 forms:
@@ -82,4 +92,4 @@ forms:
       - TestMarks
   
 actions:
-- simple_aggregate_form
+- custom_action

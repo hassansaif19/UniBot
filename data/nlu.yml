@@ -74,12 +74,27 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
 - intent: calculateaggregate
   examples: |
     - I want to calculate my aggregate
     - I want to check my admission possibility
     - Inform me about aggregate
     - Aggregate Caclualtor
+
+- intent: inter_marks
+  examples: |
+    - my inter marks are [1100](intermarks)
+    - intermarks [800](intermarks)
+    - the intermarks I have are [950](intermarks)
+    - intermarks [750](intermarks)
+
+- intent: test_marks
+  examples: |
+    - my test marks are [70](testmarks)
+    - testmarks [100](testmarks)
+    - the testmarks I have are [80](testmarks)
+    - testmarks [50](testmarks)    
 
 
 - lookup: place

@@ -8,28 +8,29 @@ from rasa_sdk.executor import CollectingDispatcher
 class ActionAggregatecalculator(Action):
 
     def name(self) -> Text:
-        return "simple_aggregate_form"
+        return "custom_action"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        InterMarksFetch= float(tracker.get_slot('InterMarks'))
+        TestMarksFetch= float(tracker.get_slot('TestMarks'))
 
-        InterMarksFetch=Tracker.get_slot('InterMarks')
-        TestMarksFetch=Tracker.get_slot('TestMarks')
-
+        print(InterMarksFetch, TestMarksFetch)    
         
         
-        if not InterMarksFetch:
-            msg = f"I have got following value {InterMarksFetch} "
-            dispatcher.utter_message(text=msg)
-            return []
-        if not TestMarksFetch:
-            msg = f"I have got following value {TestMarksFetch} "
-            dispatcher.utter_message(text=msg)
-            return []
+        # if not InterMarksFetch:
+        #     msg = f"I have got following value {InterMarksFetch} "
+        #     dispatcher.utter_message(text=msg)
+        #     return []
+        # if not TestMarksFetch:
+        #     msg = f"I have got following value {TestMarksFetch} "
+        #     dispatcher.utter_message(text=msg)
+        #     return []
         
         retval=0.5*((InterMarksFetch*100)/1100)+0.5*((TestMarksFetch))
-        retstr=str(retval)                
+        retstr= retval                
         msg = f"Calculated Aggregate is {retstr}"
         dispatcher.utter_message(text=msg)
         
