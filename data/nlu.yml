@@ -97,6 +97,17 @@ nlu:
     - testmarks [50](testmarks)    
 
 
+- intent: view_timetable
+  examples: |
+    - What is the timetable?
+    - I want to see the timetable
+    - When are my classes?
+    - What time is my class?
+    - What time do I have my classes today?
+    - Can I see the timetable?
+    
+
+
 - lookup: place
   examples: |
     - brussels

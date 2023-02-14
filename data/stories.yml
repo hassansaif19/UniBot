@@ -8,6 +8,8 @@ stories:
   - action: utter_greet
   - intent: degreeprogram
   - action: utter_availabledegree
+  - intent: view_timetable
+  - action: utter_timetable
   - intent: goodbye
   - action: utter_goodbye
 

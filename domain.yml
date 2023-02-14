@@ -15,6 +15,7 @@ intents:
 - bot_challenge
 - inter_marks
 - test_marks
+- view_timetable
 entities:
 - place
 - intermarks
@@ -84,6 +85,12 @@ responses:
    - text: What are your Intermediate Marks ..Note total marks are 1100?
   utter_ask_TestMarks:
    - text: What are your Test Marks ..Note total marks are 100?
+
+  utter_timetable:
+    - text: |
+         <-------------Please see the following link to view the time table------------------>
+         https://docs.google.com/spreadsheets/d/1D_4RnozTl6XIcj5LCILdbhWJ0UfrgUDB1zGk6L1rKRY/edit?usp=sharing
+         
 
 forms:
   simple_aggregate_form:

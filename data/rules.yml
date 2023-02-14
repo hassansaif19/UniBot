@@ -30,3 +30,9 @@ rules:
   - slot_was_set:
     - requested_slot: null
   - action: custom_action
+
+
+- rule: View Time Table
+  steps:
+  - intent: view_timetable
+  - action: utter_timetable
