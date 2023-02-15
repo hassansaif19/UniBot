@@ -16,6 +16,9 @@ intents:
 - inter_marks
 - test_marks
 - view_timetable
+- departments
+- admission_requirements
+- view_faculty
 entities:
 - place
 - intermarks
@@ -59,27 +62,47 @@ responses:
   utter_availabledegree:
   - text: |
         <-------------Following Degress Programs are Offered------------------>
-        BS Computer Science
-        BS Artificial Intelligence 
-        BS Data Science
-        BS CyberSecurity and Digital Forensics
-        BS Software Engineering
-        BS Electrical Engineering
-        BS Accounting and Finance
-        Bachelors of Business Administration
-        MS Computer Science
-        MS Artificial Intelligence 
-        MS Data Science
-        MS Software Engineering
-        MS Electrical Engineering
-        Phd Computer Science
-        Phd Artificial Intelligence 
-        Phd Data Science
+
+        1)  BS Computer Science (CS)
+        2)  BS Artificial Intelligence (AI) 
+        3)  BS Data Science (DS)
+        4)  BS CyberSecurity (CY)
+        5)  BS Software Engineering (SE)
+        6)  BS Electrical Engineering (EE)
+        7)  BS Civil Engineering (CE)
+        8)  BS Accounting and Finance (A&F)
+        9)  BS Business Analytics (BA)
+        10) BS Financial Technology (FT)
+        11) Bachelors of Business Administration (BBA)
+        
+        12) MS Computer Science (CS)
+        13) MS Artificial Intelligence (AI)
+        14) MS Data Science (DS)
+        15) MS Software Engineering (SE)
+        16) MS Software Project Management (SPM)
+        17) MS Computer Networks and Security (CNS)
+        18) MS Electrical Engineering (EE)
+        19) MS Civil Engineering (CE) 
+        20) MS Mathematics (M)
+        21) MS Applied Linguistics (AL)
+        22) MS Business Analytics (BA)
+        23) MS Management Sciences (MS)
+        24) Masters of Business Administration (MBA)
+        
+        25) PhD Computer Science (CS)
+        26) PhD Software Engineering (SE)
+        27) PhD Electrical Engineering (EE)
+        28) PhD Civil Engineering (CE)
+        29) PhD Mathematics (M)
+        30) PhD Management Sciences (MS)
+
+
+
   utter_fee_structure:
    - text: |
       <<<----------------Following is the fee structure--------------->>>
-      For BS == 8500/CH
-      For  MS== 7500/CH
+      For BS == 8500/CH (8500 per credit hour. You must complete a minimum of 130 credit hours to graduate)
+      For  MS & PhD == 7500/CH (7500 per credit hour. You must complete a minimum of 30 credit hours to graduate)
  
   utter_ask_InterMarks:
    - text: What are your Intermediate Marks ..Note total marks are 1100?
@@ -91,6 +114,71 @@ responses:
          <-------------Please see the following link to view the time table------------------>
          https://docs.google.com/spreadsheets/d/1D_4RnozTl6XIcj5LCILdbhWJ0UfrgUDB1zGk6L1rKRY/edit?usp=sharing
          
+
+  utter_departments:
+    - text: |
+        <-------------FAST University has the following departments------------------>
+
+        1) FAST School of Computing (FSC)
+        2) FAST School of Electrical Engineering (FSEE)
+        3) FAST School of Management (FSM)
+      
+      
+
+  utter_admission_requirements:
+    - text: |
+        <-------------FAST University has the following eligibility criteria------------------>
+
+        1) Undergraduate Programs :-
+              i)    BS (Engineering) :-
+                      - At least 60% marks in SSC/O-Levels
+                      - At least 60% marks in Pre-Engineering/Equivalent program
+              ii)   BS (Computing Programs) :-
+                      - At least 60% marks in SSC/O-Levels
+                      - At least 50% marks in HSSC/A-Levels
+                      - Should have studied Maths in HSSC/A-Levels
+              iii)  BBA/BS (Accounting & Finance) :-
+                      - At least 60% marks in SSC/O-Levels
+                      - At least 50% marks in HSSC/A-Levels
+
+        2) Graduate Programs :-
+              i)    MS :-
+                      - At least 60% marks or CGPA of at least 2.0
+                      - Degree in relevant subject earned after 16 years of education from an HEC recognized university
+              ii)   MBA :-
+                      - At least 60% marks or CGPA of at least 2.0
+                      - BBA or an equivalent degree earned after 16 years of education from an HEC recognized university
+
+              iii)  PhD :-
+                      - At least 70% marks or CGPA of at least 3.0
+                      - Degree in relevant subject earned after 18 years of education from an HEC recognized university
+                      - Applicant must have earned Masters Degree with coursework and Thesis
+
+
+  utter_faculty:
+    - text: |
+        <-------------FAST University has the following faculty members------------------>
+
+        1) FAST School of Computing (FSC)
+        
+         Please click on the link to view the faculty of the FAST School of Computing
+
+        http://isb.nu.edu.pk/Faculty/CS
+
+        2) FAST School of Electrical Engineering (FSEE)
+
+         Please click on the link to view the faculty of the FAST School of Electrical Engineering
+
+        http://www.isb.nu.edu.pk/Faculty/EE
+
+        3) FAST School of Management (FSM)
+
+         Please click on the link to view the faculty of the FAST School of Management
+
+        http://isb.nu.edu.pk/Faculty/fsm
+        
+
+
 
 forms:
   simple_aggregate_form:

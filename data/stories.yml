@@ -6,10 +6,19 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_happy
+  - intent: departments
+  - action: utter_departments
   - intent: degreeprogram
   - action: utter_availabledegree
   - intent: view_timetable
   - action: utter_timetable
+  - intent: feestructure
+  - action: utter_fee_structure
+  - intent: admission_requirements
+  - action: utter_admission_requirements
+  - intent: view_faculty
+  - action: utter_faculty
   - intent: goodbye
   - action: utter_goodbye
 
