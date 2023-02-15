@@ -57,6 +57,7 @@ nlu:
     - What type of degrees are availabel at Maters level
     - Show All the degree programs
     - How many different types of degrees offered here
+    
 - intent: feestructure
   examples: |
     - What is the fee structure?
@@ -96,6 +97,69 @@ nlu:
     - the testmarks I have are [80](testmarks)
     - testmarks [50](testmarks)    
 
+
+- intent: view_timetable
+  examples: |
+    - What is the timetable?
+    - I want to see the timetable
+    - When are my classes?
+    - What time is my class?
+    - What time do I have my classes today?
+    - Can I see the timetable?
+    
+
+- intent: departments
+  examples: |
+    - What departments does FAST Universtiy has?
+    - What departments does FAST Islamabad has?
+    - What departments does FAST has?
+    - What departments are there?
+    - How many departments are there?
+    - Can you tell me about the different departments of the University?
+
+- intent: admission_requirements
+  examples: |
+    - What do I need to get admission into FAST Islamabad?
+    - How can I join FAST Islamabad?
+    - How can I join FAST University?
+    - How can I become a Fastian?
+    - What is the requirement to get into FAST?
+    - What is the requirement to get into your University?
+
+- intent: view_faculty
+  examples: |
+    - Who teaches?
+    - Who teaches at FAST?
+    - Who are the teachers?
+    - Who are the instructors?
+    - What instructors do you have?
+    - What teachers do you have?
+    - Can you please tell me the faculty of FAST?
+    - Can you please tell me the faculty of FAST University?
+    - Can you please tell me about the faculty?
+
+
+
+- intent: view_study_plan
+  examples: |
+    - What is the tentative study plan?
+    - I want to see the tentative study plan
+    - I want to see the study plan
+    - I want to view the study plan
+    - Show me the study plan
+
+
+- intent: study_plan
+  examples: |
+    - [1](semester)
+    - [2](semester)
+    - [3](semester)
+    - [4](semester)
+    - [5](semester)
+    - [6](semester)
+    - [7](semester)
+    - [8](semester)
+     
 
 - lookup: place
   examples: |
