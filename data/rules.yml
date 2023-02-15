@@ -58,3 +58,29 @@ rules:
   steps:
   - intent: view_faculty
   - action: utter_faculty
+
+- rule: View Study Plan
+  steps:
+  - intent: view_study_plan
+  - action: utter_study_plan
+
+
+
+- rule: Activate Study Plan Form
+  steps:
+  - intent: study_plan
+  - action: study_plan_form
+  - active_loop: study_plan_form
+
+- rule: Submit Study Plan Form
+  condition:
+  - active_loop: study_plan_form
+  steps:
+  - action: study_plan_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_view_study_plan
+
+
+

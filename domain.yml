@@ -19,10 +19,13 @@ intents:
 - departments
 - admission_requirements
 - view_faculty
+- view_study_plan
+- study_plan
 entities:
 - place
 - intermarks
 - testmarks
+- semester
 slots:
   InterMarks:
     type: float
@@ -46,7 +49,17 @@ slots:
           - active_loop: simple_aggregate_form      
         
 
-
+  Semester:
+    type: float
+    influence_conversation: true
+    min_value: 1
+    max_value: 8
+    mappings:
+      - type: from_entity
+        entity: semester
+        conditions:
+          - active_loop: study_plan_form      
+        
 
 responses:
   utter_greet:
@@ -178,13 +191,20 @@ responses:
         http://isb.nu.edu.pk/Faculty/fsm
         
 
+  utter_study_plan:
+    - text: "Choose the semester from 1-8 to view the study plan"
 
+  
 
 forms:
   simple_aggregate_form:
     required_slots:
       - InterMarks
       - TestMarks
+  study_plan_form:
+    required_slots:
+      - Semester
   
 actions:
 - custom_action
+- action_view_study_plan

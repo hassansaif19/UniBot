@@ -6,7 +6,6 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_happy
   - intent: departments
   - action: utter_departments
   - intent: degreeprogram
@@ -19,6 +18,9 @@ stories:
   - action: utter_admission_requirements
   - intent: view_faculty
   - action: utter_faculty
+  # - intent: view_study_plan
+  # - action: utter_study_plan
+  # - action: action_view_study_plan
   - intent: goodbye
   - action: utter_goodbye
 
